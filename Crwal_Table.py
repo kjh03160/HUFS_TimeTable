@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
+from webdriver_manager.chrome import ChromeDriverManager
 
 from Class_Define import Department, Class
 
@@ -68,7 +69,7 @@ class Crwal_Table:
 
         except:
             if not self.browser:
-                self.browser = webdriver.Chrome('chromedriver.exe', options=self.options)
+                self.browser = webdriver.Chrome(ChromeDriverManager().install(), options=self.options)
             dept_eles = self.lecture_home(rq_year, rq_semester)
 
             major_index = None
@@ -152,7 +153,7 @@ class Crwal_Table:
 
     def get_avg_stars(self, dept_obj1, dept_obj2, grade):
         if not self.browser:
-            self.browser = webdriver.Chrome('chromedriver.exe', options=self.options)
+            self.browser = webdriver.Chrome(ChromeDriverManager().install(), options=self.options)
         browser = self.browser
         browser.get("https://everytime.kr/lecture")
         try:
