@@ -56,17 +56,21 @@ class User_Table(User):
     def insert_course(self, course_obj):
         self.courses.append(course_obj)
         class_time = course_obj.class_time.split('(')[0].strip()
-        class_time = int(class_time.split()[-1])
-        if class_time > self.longest:
-            self.longest = class_time
+        try:
+            class_time = int(class_time.split()[-1])
+            if class_time > self.longest:
+                self.longest = class_time
+        except:
+            pass
         self.credits += int(course_obj.credit)
 
     def make_txt(self, fst_obj, sec_obj):
         first_major_obj = fst_obj
         for course in first_major_obj.classes:
-            if (self.course_evl == True and ' - ' in course.stars) or not course.year in self.grade or '이중' in course.area:
+            if (self.course_evl and ' - ' in course.stars) or not course.year in self.grade or '이중' in course.area:
                 continue
             self.insert_course(course)
+
         print('1전공 조건 추출 완료')
 
         if sec_obj:
