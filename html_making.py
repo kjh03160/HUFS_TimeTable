@@ -290,12 +290,11 @@ class HTML:
       </div>
       <div id='container1'>
         <div class='explore'>E x p l o r e !</div>
-        <a href="https://www.instagram.com/juna_km/" target="_blank"><i class="fab fa-instagram"></i> </a>
+
         <a href="https://github.com/kjh03160" target="_blank"><i class="fab fa-github"></i></a>
         
       </div>
-      <div class='created'>   <a href="https://likelion.net/" target="_blank"><img src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/53319997_2288407134771022_3834362680915787776_n.png?_ncat=103&_nc_ohc=PuEJDAR0sc0AQmKZ_9qb_PhpWTQPncx2wW-F3ePXw-AAqw0j5lX1Ww4dQ&_nc_ht=scontent-gmp1-1.xx&oh=89450d424bcb98be2bcc177b7e8cc2f7&oe=5E7CF0A6" width="140px" height="150px">
-      </a><div id='made'>Made<br> by<br> juna_km</div>
+      <div class='created'>   <div id='made'>Made<br> by<br> juna_km</div>
         </div>
     </body>
     
@@ -519,11 +518,6 @@ left:-73px;
                   </div>
                 </div>
               <!-- follow me template -->
-              <div class="made-with-love">
-                Made 
-                <i>★</i> by
-                <a target="_blank" href="https://www.instagram.com/juna_km/">Junha Kim</a>
-              </div>
 </body>
 </html>
         """
