@@ -241,7 +241,7 @@ class HTML:
       margin-right: 10px;
     }
     #made{
-      float: left;
+      
       display: table-cell;
       vertical-align: middle;
       text-align: center;;
@@ -294,8 +294,7 @@ class HTML:
         <a href="https://github.com/kjh03160" target="_blank"><i class="fab fa-github"></i></a>
         
       </div>
-      <div class='created'>   <div id='made'>Made<br> by<br> juna_km</div>
-        </div>
+
     </body>
     
     </html>
