@@ -9,7 +9,7 @@ from Class_Define import Department, Class
 class Crwal_Table:
     def __init__(self):
         self.options = webdriver.ChromeOptions()
-        self.options.add_argument('headless')
+        # self.options.add_argument('headless')
         self.options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) "
                              "Chrome/61.0.3163.100 Safari/537.36")
 
@@ -79,7 +79,7 @@ class Crwal_Table:
                     break
             print(self.dept_list[major_index], '데이터 수집 중')
 
-            if not major_index:
+            if major_index == None:
                 raise Exception("학과를 정확히 입력해주세요!")
 
             # major_index = self.dept_list.index(major)
@@ -180,7 +180,8 @@ class Crwal_Table:
 
         def course_insert(class_list):
             for course in class_list:
-                if course.year not in grade:
+
+                if course.year not in grade or len(course.prof) == 0:
                     continue
                 else:
                     if (fst_class_list == class_list and '이중' in course.area) \
@@ -224,7 +225,7 @@ class Crwal_Table:
         if scd_class_list:
             course_insert(scd_class_list)
             print('2전공 완료')
-        browser.close()
+        # browser.close()
 
 
     def all_courses(self, dept_obj, year, semester):
