@@ -48,12 +48,15 @@ def main():
                 file.write(html.list_head_html + html.list_body_html +html.list_bottom_html)
             print('완료!')
             os.startfile('Result.html')
+            print()
+            print()
+
         except Exception as e:
             print(e)
             print('다시 시도해주세요')
             print()
-        finally:
-            os.system('cls')
+        # finally:
+        #     os.system('cls')
 
 if __name__ == "__main__":
     main()
